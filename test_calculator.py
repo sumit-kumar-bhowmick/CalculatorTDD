@@ -26,3 +26,7 @@ def test_add_multiple_numbers_input():
     assert add("1\n2\n3\n4") == 10
 
 
+def test_add_with_deliminator():
+    # test with deliminator
+    assert add(";\n1\n2\n3") == 6
+    assert add(';\n2;12;5') == 19
