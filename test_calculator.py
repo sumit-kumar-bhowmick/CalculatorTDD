@@ -11,3 +11,11 @@ def test_add_single_number():
     assert add("1") == 1
     assert add("12") == 12
     assert add("123") == 123
+
+
+def test_add_two_input_string():
+    # test for two number separated by ,
+    assert add("1,2") == 3
+    # test for two number separated by \n
+    assert add("1\n2\n") == 3
+
