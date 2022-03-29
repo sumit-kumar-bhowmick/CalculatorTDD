@@ -2,6 +2,10 @@ import re
 
 
 def add(input_string: str):
+
+    if input_string == None:
+        return -1
+
     number_list = re.findall("(\d+|-\d+)", input_string)  # 1 12
 
     if len(number_list) == 0:

@@ -62,4 +62,3 @@ def test_add_none_input():
 
     add(None) == -1
 
-
