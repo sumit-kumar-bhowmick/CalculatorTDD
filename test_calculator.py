@@ -30,3 +30,14 @@ def test_add_with_deliminator():
     # test with deliminator
     assert add(";\n1\n2\n3") == 6
     assert add(';\n2;12;5') == 19
+
+
+def test_add_not_allowed_separator():
+    # test for not allowing , and \n together as separator
+    assert add(
+        "1,\n") == f'''wrong input,the input contain "\\n," or ",\\n".provide any one of them as separator.ie , or \\n'''
+    assert add(
+        "1,\n2,\n3") == f'''wrong input,the input contain "\\n," or ",\\n".provide any one of them as separator.ie , or \\n'''
+    assert add(
+        "1\n,2,\n3") == f'''wrong input,the input contain "\\n," or ",\\n".provide any one of them as separator.ie , or \\n'''
+
