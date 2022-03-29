@@ -1,4 +1,5 @@
 from calculator import add
+import pytest
 
 
 def test_add_empty_string():
@@ -40,4 +41,13 @@ def test_add_not_allowed_separator():
         "1,\n2,\n3") == f'''wrong input,the input contain "\\n," or ",\\n".provide any one of them as separator.ie , or \\n'''
     assert add(
         "1\n,2,\n3") == f'''wrong input,the input contain "\\n," or ",\\n".provide any one of them as separator.ie , or \\n'''
+
+
+def test_add_negative_input():
+    # test for negative numbers as input
+    with pytest.raises(ValueError):
+        add("-1,2,3")
+
+    with pytest.raises(ValueError):
+        add("-1,-2,3")
 
