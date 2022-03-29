@@ -58,3 +58,8 @@ def test_add_negative_input():
         add(";\n-1;-2;3")
 
 
+def test_add_none_input():
+
+    add(None) == -1
+
+
