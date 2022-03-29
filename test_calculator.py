@@ -51,3 +51,10 @@ def test_add_negative_input():
     with pytest.raises(ValueError):
         add("-1,-2,3")
 
+    with pytest.raises(ValueError):
+        add("-1\n-2\n3")
+
+    with pytest.raises(ValueError):
+        add(";\n-1;-2;3")
+
+
