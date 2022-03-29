@@ -1,3 +1,4 @@
+from calculator import add
 
 
 def test_add_empty_string():
