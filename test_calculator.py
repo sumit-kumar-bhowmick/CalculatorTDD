@@ -19,3 +19,10 @@ def test_add_two_input_string():
     # test for two number separated by \n
     assert add("1\n2\n") == 3
 
+
+def test_add_multiple_numbers_input():
+    # test for multiple numbers as input.(i.e >2 numbers).
+    assert add("1,2,3,4") == 10
+    assert add("1\n2\n3\n4") == 10
+
+
